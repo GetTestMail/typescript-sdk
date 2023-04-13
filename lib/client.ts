@@ -31,6 +31,7 @@ class GetTestMailClient {
   async waitForMessage(id: string): Promise<WaitForMessageResponse> {
     const response = await fetch(`${this.baseUrl}/gettestmail/${id}`, {
       method: 'GET',
+      redirect: 'follow',
       headers: {
         'Content-Type': 'application/json',
         'X-API-Key': this.apiKey,

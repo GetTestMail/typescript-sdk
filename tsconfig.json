@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/",
+    "target": "ES2015",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ]
+  },
+  "include": [
+    "lib/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*",
+    "**/*.test.*",
+    "**/*.spec.*"
+  ]
+}
