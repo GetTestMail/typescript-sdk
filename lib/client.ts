@@ -1,4 +1,4 @@
-import { CreateNewRequest, CreateNewResponse, GetTestMail, Problem, WaitForMessageResponse } from "./models";
+import { APIError, CreateNewRequest, CreateNewResponse, GetTestMail, Problem, WaitForMessageResponse } from "./models";
 
 class GetTestMailClient {
   private apiKey: string;
@@ -21,7 +21,7 @@ class GetTestMailClient {
 
     if (!response.ok) {
       const problem: Problem = await response.json();
-      throw new Error(problem.detail);
+      throw new APIError(problem);
     }
 
     const getTestMail: GetTestMail = await response.json();
@@ -40,7 +40,7 @@ class GetTestMailClient {
 
     if (!response.ok) {
       const problem: Problem = await response.json();
-      throw new Error(problem.detail);
+      throw new APIError(problem);
     }
 
     const getTestMail: GetTestMail = await response.json();
