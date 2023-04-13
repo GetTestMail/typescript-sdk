@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Typescript SDK for GetTestMail",
   "main": "dist/index.js",
-  "types": "dist/client.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist/*",
     "build": "tsc"
@@ -18,12 +18,15 @@
     "GetTestMail",
     "typescript"
   ],
-  "author": "GetTestMail",
+  "author": "neurocode I/O GmbH <info@neurocode.io>",
+  "files": [
+    "dist/"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/GetTestMail/typescript-sdk/issues"
   },
-  "homepage": "https://github.com/GetTestMail/typescript-sdk#readme",
+  "homepage": "https://github.com/GetTestMail/typescript-sdk#README.md",
   "devDependencies": {
     "typescript": "5.0.4"
   }
