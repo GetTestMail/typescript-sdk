@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist/*",
+    "test": "echo todo",
     "build": "tsc"
   },
   "repository": {
