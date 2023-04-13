@@ -9,14 +9,14 @@ class GetTestMailClient {
     this.baseUrl = baseUrl;
   }
 
-  async createNew(request: CreateNewRequest): Promise<CreateNewResponse> {
+  async createNew(request?: CreateNewRequest): Promise<CreateNewResponse> {
     const response = await fetch(`${this.baseUrl}/gettestmail`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'X-API-Key': this.apiKey,
       },
-      body: JSON.stringify(request),
+      body: request ? JSON.stringify(request) : undefined,
     });
 
     if (!response.ok) {
