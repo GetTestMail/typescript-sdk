@@ -42,7 +42,7 @@ export class APIError extends Error {
 }
 
 export type CreateNewRequest = {
-  expiresAt?: string;
+  expiresAt: string;
 };
 
 export interface CreateNewResponse {
