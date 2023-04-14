@@ -44,11 +44,3 @@ export class APIError extends Error {
 export type CreateNewRequest = {
   expiresAt: string;
 };
-
-export interface CreateNewResponse {
-  getTestMail: GetTestMail;
-}
-
-export interface WaitForMessageResponse {
-  getTestMail: GetTestMail;
-}

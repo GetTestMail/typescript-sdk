@@ -1,4 +1,4 @@
-import { APIError, CreateNewRequest, CreateNewResponse, GetTestMail, Problem, WaitForMessageResponse } from "./models";
+import { APIError, CreateNewRequest, GetTestMail, Problem } from "./models";
 
 class GetTestMailClient {
   private apiKey: string;
@@ -9,7 +9,7 @@ class GetTestMailClient {
     this.baseUrl = baseUrl;
   }
 
-  async createNew(request?: CreateNewRequest): Promise<CreateNewResponse> {
+  async createNew(request?: CreateNewRequest): Promise<GetTestMail> {
     const response = await fetch(`${this.baseUrl}/gettestmail`, {
       method: 'POST',
       headers: {
@@ -23,12 +23,12 @@ class GetTestMailClient {
       const problem: Problem = await response.json();
       throw new APIError(problem);
     }
-
     const getTestMail: GetTestMail = await response.json();
-    return { getTestMail };
+
+    return getTestMail;
   }
 
-  async waitForMessage(id: string): Promise<WaitForMessageResponse> {
+  async waitForMessage(id: string): Promise<GetTestMail> {
     const response = await fetch(`${this.baseUrl}/gettestmail/${id}`, {
       method: 'GET',
       redirect: 'follow',
@@ -42,9 +42,9 @@ class GetTestMailClient {
       const problem: Problem = await response.json();
       throw new APIError(problem);
     }
-
     const getTestMail: GetTestMail = await response.json();
-    return { getTestMail };
+
+    return getTestMail;
   }
 }
 
