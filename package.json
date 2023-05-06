@@ -6,6 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist/*",
+    "predeploy": "npm run clean && npm run build",
+    "deploy": "np",
     "test": "echo todo",
     "build": "tsc"
   },
