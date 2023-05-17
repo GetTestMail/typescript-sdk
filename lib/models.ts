@@ -1,4 +1,5 @@
 export interface GetTestMail {
+  id: string;
   emailAddress: string;
   expiresAt: string;
   message?: Message;

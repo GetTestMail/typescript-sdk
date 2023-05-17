@@ -31,6 +31,6 @@ const mailBox = await testMail.createNew()
 ### Wait for an email to be received
 
 ```typescript
-const { message } = await testMail.waitForMessage(mailBox.emailAddress)
+const { message } = await testMail.waitForMessage(mailBox.id)
 ```
 
